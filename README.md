@@ -1,3 +1,18 @@
+## Run the project
+
+Start the containers : `./vendor/bin/sail up -d`
+
+Run the migrations : `./vendor/bin/sail migrate`
+
+./vendor/bin/shell -> `npm run dev`
+
+Create a new user : http://localhost:8080/register
+
+Login : http://localhost:8080/login
+
+Access the main page : http://localhost:8080/
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

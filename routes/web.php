@@ -2,6 +2,7 @@
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
 use Inertia\Inertia;
 
 /*
@@ -33,3 +34,28 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+// Tasks
+Route::get('/', [TaskController::class, 'index'])
+    ->name('tasks')
+    ->middleware('auth');
+
+Route::get('tasks/create', [TaskController::class, 'create'])
+    ->name('tasks.create')
+    ->middleware('auth');
+
+Route::post('tasks', [TaskController::class, 'store'])
+    ->name('tasks.store')
+    ->middleware('auth');
+
+Route::get('tasks/{tasks}/edit', [TaskController::class, 'edit'])
+    ->name('tasks.edit')
+    ->middleware('auth');
+
+Route::put('tasks/{tasks}', [TaskController::class, 'update'])
+    ->name('tasks.update')
+    ->middleware('auth');
+
+Route::delete('tasks/{tasks}', [TaskController::class, 'destroy'])
+    ->name('tasks.destroy')
+    ->middleware('auth');
