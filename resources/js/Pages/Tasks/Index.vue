@@ -4,7 +4,7 @@
             <span class="font-medium">{{$page.props.flash.message }}</span>
         </div>
 
-        <div class="mx-auto mx-10 my-5">
+        <div class="mx-10 my-5">
             <a :href="route('tasks.create')">
                 <button
                     class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
@@ -23,12 +23,6 @@
                                 {{ task.title }}
                             </Link>
                             <p class="text-gray-500"> {{ task.description }}</p>
-                        </div>
-                        <div class="flex-shrink-0 pr-2">
-                            <button type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                                <span class="sr-only">Open options</span>
-                                <EllipsisVerticalIcon class="h-5 w-5" aria-hidden="true" />
-                            </button>
                         </div>
                     </div>
                 </li>
