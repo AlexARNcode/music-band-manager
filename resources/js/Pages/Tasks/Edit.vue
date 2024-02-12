@@ -76,7 +76,9 @@ export default {
             this.form.put('/tasks/' + this.task.id)
         },
         destroy() {
-            this.form.delete('/tasks/' + this.task.id)
+            if (confirm("Are you sure you want to delete this task?")) {
+                this.form.delete('/tasks/' + this.task.id)
+            }
         },
         cancel() {
             this.form.reset();
