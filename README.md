@@ -3,7 +3,9 @@ This project is made with the "VILT" stack : Vue, Inertia, Laravel, Tailwind.
 
 it is using Docker containers through "Sail" (from Laravel)
 
-Also, it has a CI configured to check the Backend code.
+Also, it has a CI configured:
+- Backend coding style check
+- Frontend coding style check
 
 <hr />
 
