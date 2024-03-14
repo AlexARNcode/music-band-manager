@@ -23,4 +23,21 @@ jobs:
 
       - name: Check PHP coding style with PHPCS
         run: ./vendor/bin/phpcs --standard=./ruleset.xml ./app
+  frontend-style:
+    runs-on: ubuntu-latest
+    needs: backend-style
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install NPM dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npx eslint .
 
